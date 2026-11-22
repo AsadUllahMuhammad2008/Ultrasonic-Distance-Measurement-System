@@ -47,14 +47,16 @@ All modules must share a common ground. The sketch uses LCD I²C address 0x27. S
 - Arduino Uno board support
 - Wire library (included with the Arduino AVR core)
 - A compatible LiquidCrystal_I2C library
-The sketch is in [`src/ultrasonic_distance.ino`](src/ultrasonic_distance.ino). In Arduino IDE:
+
+The sketch is in [`Ultrasonic_Distance_Measurement_System.ino`](Ultrasonic_Distance_Measurement_System.ino). In Arduino IDE:
 1. Install or open Arduino IDE.
 2. Install a compatible LiquidCrystal_I2C library from Library Manager.
-3. Open src/ultrasonic_distance.ino.
+3. Open Ultrasonic_Distance_Measurement_System.ino.
 4. Select Arduino Uno under Tools → Board.
 5. Select the correct serial/USB port.
 6. Verify the sketch and upload it to the board.
 7. Open the LCD and place an object in front of the sensor to observe the distance reading.
+
 Different LiquidCrystal_I2C library variants expose slightly different initialization methods. This sketch uses lcd.init() and requires a compatible variant.
 ## How it works
 **1. Initialize:** Configure D6 as an output and D7 as an input. Initialize the LCD and show a startup message.
@@ -94,12 +96,13 @@ The values above illustrate the display format; they are not recorded test resul
 - snprintf() constructs the LCD text line, and printLcdLine() fills unused columns with spaces.
 - A timeout does not prove that an object is physically out of range. A disconnected sensor, incorrect wiring, poor reflection, or other fault can also cause no echo.
 ## Troubleshooting
-Symptom	Checks
-LCD is blank	Check LCD power, common GND, SDA=A4, SCL=A5, contrast/backpack adjustment, and I²C address.
-LCD backlight is on but no text appears	Confirm the library is compatible with lcd.init() and that the address is correct.
-No echo appears continuously	Check sensor VCC and GND, TRIG=D6, ECHO=D7, and ensure the target can reflect the ultrasonic signal.
-Distance is unstable	Keep the sensor still, use a broad flat target, avoid angled/soft surfaces, and check the power and jumper connections.
-Board resets or readings are erratic	Use a stable supply and verify that the modules share a common ground.
+|Symptom | Checks|
+|--------|-------|
+|LCD is blank | Check LCD power, common GND, SDA=A4, SCL=A5, contrast/backpack adjustment, and I²C address.|
+|LCD backlight is on but no text appears | Confirm the library is compatible with lcd.init() and that the address is correct.|
+|No echo appears continuously | Check sensor VCC and GND, TRIG=D6, ECHO=D7, and ensure the target can reflect the ultrasonic signal.|
+|Distance is unstable | Keep the sensor still, use a broad flat target, avoid angled/soft surfaces, and check the power and jumper connections.|
+|Board resets or readings are erratic | Use a stable supply and verify that the modules share a common ground.|
 
 
 ## Limitations
@@ -122,5 +125,4 @@ Ultrasonic_Distance_Measurement_System/
 ├── README.md
 └── PROJECT_REPORT.md
 ```
-## Project status
-This repository documents the supplied circuit concept and Arduino sketch. No measured accuracy results or formal hardware test data were provided with the project materials.
+
