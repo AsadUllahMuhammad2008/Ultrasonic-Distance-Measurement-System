@@ -13,29 +13,32 @@ https://app.cirkitdesigner.com/project/fd6a2ca5-a0b5-43da-8b9f-3155bc9a5fd7
 - Displays a No echo message when a reading times out.
 - Pads LCD lines with spaces to remove characters left over from longer messages.
 ## Components
-Component	Purpose
-Arduino Uno	Controls the sensor and LCD, and calculates distance
-HC-SR04 ultrasonic sensor	Sends an ultrasonic burst and receives its echo
-16×2 LCD with I²C interface	Displays the measured distance or timeout message
-Breadboard and jumper wires	Provide temporary circuit connections
-USB cable or suitable regulated power source	Powers the Arduino and circuit
+| Component | Purpose |
+|------|----------|
+|Arduino Uno | Controls the sensor and LCD, and calculates distance|
+|HC-SR04 ultrasonic sensor | Sends an ultrasonic burst and receives its echo|
+|16×2 LCD with I²C interface | Displays the measured distance or timeout message|
+|Breadboard and jumper wires | Provide temporary circuit connections|
+|USB cable or suitable regulated | power source	Powers the Arduino and circuit|
 
 
 ## Wiring
 ## HC-SR04 to Arduino Uno
-HC-SR04 pin	Arduino Uno pin
-VCC	5V
-TRIG	D6
-ECHO	D7
-GND	GND
+|HC-SR04 pin | Arduino Uno pin|
+|-----------|-----------|
+|VCC | 5V|
+|TRIG | D6|
+|ECHO | D7|
+|GND | GND|
 
 
 ## I²C LCD to Arduino Uno
-I²C LCD pin	Arduino Uno pin
-VCC	5V
-GND	GND
-SDA	A4 (SDA)
-SCL	A5 (SCL)
+|I²C LCD pin | Arduino Uno pin|
+|-------|------|
+|VCC | 5V|
+|GND | GND|
+|SDA | A4 (SDA)|
+|SCL | A5 (SCL)|
 
 
 All modules must share a common ground. The sketch uses LCD I²C address 0x27. Some LCD backpacks use a different address; check the module or run an I²C scanner if the display does not respond.
