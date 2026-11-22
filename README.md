@@ -2,7 +2,9 @@
 An Arduino Uno project that measures the distance to an object with an **HC-SR04 ultrasonic sensor** and displays the result on a **16×2 I²C LCD**.
 
 The Arduino sends a short trigger pulse, measures the time taken for the echo to return, converts that time into centimetres, and updates the LCD approximately every half-second.
+
 https://app.cirkitdesigner.com/project/fd6a2ca5-a0b5-43da-8b9f-3155bc9a5fd7
+
 ## Features
 - Measures object distance using an HC-SR04 ultrasonic sensor.
 - Displays the result in centimetres with one decimal place.
