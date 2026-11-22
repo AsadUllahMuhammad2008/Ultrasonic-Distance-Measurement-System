@@ -12,12 +12,6 @@ https://app.cirkitdesigner.com/project/fd6a2ca5-a0b5-43da-8b9f-3155bc9a5fd7
 - Uses a 30 ms echo timeout to avoid waiting indefinitely when no echo is received.
 - Displays a No echo message when a reading times out.
 - Pads LCD lines with spaces to remove characters left over from longer messages.
-## Circuit diagram
-
-### Wiring note:
-The supplied illustration includes a 200 Ω resistor near the sensor wiring. A standard HC-SR04 does not need a series resistor in its VCC supply path. Connect the sensor's VCC directly to a regulated 5 V supply and its GND to common GND. Check the actual breadboard connections before powering the circuit.
-
-The image also shows a four-cell AA battery holder. Its exact power path is not sufficiently clear in the illustration to treat it as a confirmed wiring instruction. For initial testing, power the Uno through USB. For standalone operation, use a suitable regulated supply and connect all grounds together. Do not connect an unregulated battery pack directly to the 5 V pin.
 ## Components
 Component	Purpose
 Arduino Uno	Controls the sensor and LCD, and calculates distance
